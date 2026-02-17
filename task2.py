@@ -26,61 +26,53 @@ def main():
     soda_quantity_str = input("How many sodas? ")
     gallons_str = input("How many gallons of gas? ")
     pounds_str = input("How many pounds of deli meat? ")
-    lottery_quantity_str = input("How many lottery tickets? )
+    lottery_quantity_str = input("How many lottery tickets? ")
 
 
 # Comment out the line below after fixing input bugs
-main()
+#main()
 
 
 # --- Receipt Header ---
-print(""
-========================================
-       GAS STATION RECEIPT
-      Thank you for shopping!
-========================================
-"")
+print("========================================\n       GAS STATION RECEIPT\n      Thank you for shopping!\n========================================")
+
 
 # --- Candy Bars ---
 # Price: $1.89 each (float price, int quantity)
-candy_price = 1.89
-candy_quantity = candy_quantity_str
+candy_price = float(1.89)
+candy_quantity = int(candy_quantity_str)
 candy_total = candy_price * candy_quantity
 print(f"Candy Bars: {candy_quantity} x ${candy_price} = ${candy_total}")
 
 # --- Soda Bottles ---
 # Price: $2.49 each (float price, int quantity)
-soda_price = 2.49
-soda_quantity = soda_quantity_str
+soda_price = float(2.49)
+soda_quantity = int(soda_quantity_str)
 soda_total = soda_price * soda_quantity
 print(f"Soda: {soda_quantity} x ${soda_price} = ${soda_total}")
 
 # --- Gas ---
 # Price: $3.25 per gallon (float price, float quantity)
-gas_price = 3.25
-gallons = gallons_str
+gas_price = float(3.25)
+gallons = float(gallons_str)
 gas_total = gas_price * gallons
 print(f"Gas: {gallons} gallons x ${gas_price} = ${gas_total}")
 
 # --- Deli Meat ---
 # Price: $8.99 per pound (float price, float quantity)
-deli_price = 8.99
-pounds = pounds_str
+deli_price = float(8.99)
+pounds = float(pounds_str)
 deli_total = deli_price * pounds
 print(f"Deli Meat: {pounds} lbs x ${deli_price} = ${deli_total}")
 
 # --- Lottery Tickets ---
 # Price: $2 each (int price, int quantity)
-lottery_price = 2
-lottery_quantity = lottery_quantity_str
+lottery_price = int(2)
+lottery_quantity = int(lottery_quantity_str)
 lottery_total = lottery_price * lottery_quantity
 print(f"Lottery: {lottery_quantity} x ${lottery_price} = ${lottery_total}")
 
 # --- Receipt Total ---
 receipt_total = candy_total + soda_total + gas_total + deli_total + lottery_total
-print(f"""
-========================================
-TOTAL: ${receipt_total}
-========================================
-Thank you! Come again!
-""")
+print(f"========================================\nTOTAL: ${receipt_total}\n========================================\nThank you! Come again!")
+
